@@ -1,6 +1,6 @@
 {
   "name": "react-spotify-playback-player",
-  "private": true,
+  "private": false,
   "author": "Ariel Betti",
   "version": "1.0.0",
   "type": "module",
@@ -28,5 +28,25 @@
     "@vitejs/plugin-react": "^2.1.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
-  }
+  },
+  "description": "Customized player for spotify playback with react!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArielBetti/react-spotify-playback-player.git"
+  },
+  "keywords": [
+    "react",
+    "spotify",
+    "player",
+    "react-spotify-player",
+    "spotify-playback",
+    "spotify-playback-player",
+    "spotify-player"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArielBetti/react-spotify-playback-player/issues"
+  },
+  "homepage": "https://github.com/ArielBetti/react-spotify-playback-player#readme"
 }
