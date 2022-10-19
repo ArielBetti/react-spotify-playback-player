@@ -1,0 +1,34 @@
+{
+  "name": "react-spotify-playback-player-playground",
+  "author": "Ariel Betti <ariel.betti@gmail.com>",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "@types/styled-components": "^5.1.26",
+    "add": "^2.0.6",
+    "axios": "^1.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-lazy-load-image-component": "^1.5.5",
+    "react-spotify-playback-player": "2.0.3-beta",
+    "react-spotify-web-playback-sdk": "^3.0.1",
+    "styled-components": "^5.3.6",
+    "vite-plugin-dts": "^1.6.6",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
