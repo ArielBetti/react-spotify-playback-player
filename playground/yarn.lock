@@ -1192,10 +1192,10 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-spotify-playback-player@2.0.3-beta:
-  version "2.0.3-beta"
-  resolved "https://registry.yarnpkg.com/react-spotify-playback-player/-/react-spotify-playback-player-2.0.3-beta.tgz#da0813f62386c5af162f3c2817460eef40e7fa9e"
-  integrity sha512-F+/ouykPIGuD3Xlkl+06sQf0p0LshhSVwSO1eOLY3OhwYhZd9QVdj2CsDaxNOKNI0VtHwC6CjQxNgOWwgzFF5w==
+react-spotify-playback-player@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-spotify-playback-player/-/react-spotify-playback-player-2.0.1.tgz#0d7e608edebbf64915d14b76afc5981414300a08"
+  integrity sha512-B53VaxUKHHMm+yTtJD839RVhVA2Mod34RvMJCdwDuvikw9y/D6so5ygD2fQ+GLAyYKUtswHKKNXDwkEMQVIBLQ==
   dependencies:
     "@types/react-lazy-load-image-component" "^1.5.2"
     "@types/styled-components" "^5.1.26"
