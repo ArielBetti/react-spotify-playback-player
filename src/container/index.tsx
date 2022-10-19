@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { IInitializedProps, Initialize } from "./core";
+import { IInitializedProps, Initialize } from "../core";
 
 // hooks
-import { EventEmitterContext } from "./hooks/useEventEmitter/context";
+import { EventEmitterContext } from "../hooks/useEventEmitter/context";
 
 // ::
 const SpotifyPlaybackPlayer: FC<IInitializedProps> = ({

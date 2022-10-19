@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const PlayerGlobalStyle = createGlobalStyle`
+const PlaygroundGlobalStyles = createGlobalStyle`
   html,
   body {
     color: ${({ theme }) => theme.primaryTextColor};
@@ -28,4 +28,4 @@ const PlayerGlobalStyle = createGlobalStyle`
 
 `;
 
-export default PlayerGlobalStyle;
+export default PlaygroundGlobalStyles;

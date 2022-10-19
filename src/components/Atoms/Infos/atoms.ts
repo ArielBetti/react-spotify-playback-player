@@ -16,7 +16,6 @@ export const PlayerInfosContainer = styled.div`
 export const PlayerInfoAlbumArt = styled(LazyLoadImage)`
   width: 60px;
   height: 60px;
-  margin-right: 10px;
 `;
 
 export const PlayerInfoTextContainer = styled.div`
@@ -26,6 +25,7 @@ export const PlayerInfoTextContainer = styled.div`
   max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
+  padding-left: ${(props) => props.theme?.spacing.xxs};
   @media (max-width: ${(props) => props.theme?.breakpoints.sm}) {
     max-width: 90%;
   }
@@ -33,6 +33,9 @@ export const PlayerInfoTextContainer = styled.div`
 
 export const PlayerInfoTrackName = styled.p<IPlayerInfoTrackName>`
   transition: linear 2.5s transform;
+  font-size: 1.15em;
+  color: ${(props) => props.theme.primaryTextColor};
+  margin: 0px;
   width: auto;
   cursor: pointer;
   :hover {
@@ -50,6 +53,8 @@ export const PlayerInfoTrackArtists = styled.span<IPlayerInfoTrackArtists>`
   transition: linear 2.5s transform;
   width: auto;
   cursor: default;
+  font-size: 1em;
+  margin: 0px;
   color: ${(props) => props.theme.secondaryTextColor};
 
   span {

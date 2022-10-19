@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SpotifyPlaybackPlayer from "../../..";
+import SpotifyPlaybackPlayer from "../../../container";
 
 // components
 import * as Atom from "./atoms";

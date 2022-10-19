@@ -5,7 +5,6 @@ import { Player } from "../components";
 
 // theme
 import { defaultTheme } from "../theme/default";
-import PlayerGlobalStyle from "../theme/globals";
 
 // types
 import type { IInitializedProps } from "./types";
@@ -23,26 +22,28 @@ const Initialize: FC<IInitializedProps> = ({
     [token]
   );
 
+  const newTheme = useMemo(() => theme, [theme]);
+
   return useMemo(
     () => (
       <ThemeProvider
         theme={{
           ...defaultTheme(),
           backgroundColor:
-            theme?.backgroundColor || defaultTheme().backgroundColor,
+            newTheme?.backgroundColor || defaultTheme().backgroundColor,
           highLightColor:
-            theme?.highLightColor || defaultTheme().highLightColor,
+            newTheme?.highLightColor || defaultTheme().highLightColor,
           primaryTextColor:
-            theme?.primaryTextColor || defaultTheme().primaryTextColor,
+            newTheme?.primaryTextColor || defaultTheme().primaryTextColor,
           secondaryBackgroundColor:
-            theme?.secondaryBackgroundColor ||
+            newTheme?.secondaryBackgroundColor ||
             defaultTheme().secondaryBackgroundColor,
           secondaryTextColor:
-            theme?.secondaryTextColor || defaultTheme().secondaryTextColor,
-          disabledColor: theme?.disabledColor || defaultTheme().disabledColor,
+            newTheme?.secondaryTextColor || defaultTheme().secondaryTextColor,
+          disabledColor:
+            newTheme?.disabledColor || defaultTheme().disabledColor,
         }}
       >
-        <PlayerGlobalStyle />
         <WebPlaybackSDK
           initialDeviceName={deviceName}
           getOAuthToken={getOAuthToken}
@@ -54,7 +55,7 @@ const Initialize: FC<IInitializedProps> = ({
         </WebPlaybackSDK>
       </ThemeProvider>
     ),
-    [token]
+    [token, theme]
   );
 };
 

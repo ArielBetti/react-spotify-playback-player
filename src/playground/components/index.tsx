@@ -5,10 +5,12 @@ import { defaultTheme } from "../../theme/default";
 import Form from "./Form";
 import { Container } from "../../components";
 import Header from "./Header";
+import PlaygroundGlobalStyles from "../../theme/globals";
 
 // ::
 const Playground = () => (
   <ThemeProvider theme={defaultTheme()}>
+    <PlaygroundGlobalStyles />
     <Container>
       <Header />
       <Form />

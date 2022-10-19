@@ -37,7 +37,7 @@ const Device = () => {
     }
 
     return <MdVolumeMute size={30} color={theme?.highLightColor} />;
-  }, [volume]);
+  }, [volume, theme]);
 
   const onChangeVolume = useCallback(
     (volume: number | string) => {

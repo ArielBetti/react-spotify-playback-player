@@ -20,6 +20,9 @@ export const PlayerProgressBarTimer = styled.span`
   justify-content: center;
   align-items: center;
   min-width: 35px;
+  color: ${(props) => props?.theme.primaryTextColor};
+  font-size: 1em;
+  margin: 0px;
 `;
 
 export const PlayerProgressBarSlider = styled.input<IPlayerProgressBarSlider>`
