@@ -1,11 +1,3 @@
-// containers
-import Initialize from "./Initialize";
+import type { IInitializedProps } from "./types";
 
-// types
-import { IInitializedProps } from "./types";
-
-// export: containers
-export { Initialize };
-
-// export: types
 export type { IInitializedProps };

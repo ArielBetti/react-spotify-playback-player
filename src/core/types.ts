@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
-import { DefaultTheme } from "styled-components";
+import { PlaybackState, Player } from "../interfaces";
 
 export interface IInitializedProps {
   children?: ReactNode;
-  deviceName: string;
+  player?: Player;
+  playback?: PlaybackState | undefined;
+  deviceIsReady?: "ready" | "not_ready";
   theme?: {
     backgroundColor?: string;
     highLightColor?: string;
@@ -12,6 +14,5 @@ export interface IInitializedProps {
     secondaryTextColor?: string;
     disabledColor?: string;
   };
-  token: string;
   onLinkClick?: (e?: any) => any;
 }

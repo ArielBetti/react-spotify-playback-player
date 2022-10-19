@@ -1,8 +1,5 @@
+import { FC } from "react";
 import { useTheme } from "styled-components";
-import {
-  usePlaybackState,
-  useSpotifyPlayer,
-} from "react-spotify-web-playback-sdk";
 
 // icons
 import {
@@ -12,33 +9,33 @@ import {
   MdSkipPrevious,
 } from "react-icons/md";
 
+// types
+import type { IPlayerControls } from "./types";
+
 // atoms: components
 import * as Atom from "./atoms";
 import { useMemo } from "react";
 
 // ::
-const Controls = () => {
+const Controls: FC<IPlayerControls> = ({ player, playback }) => {
   const theme = useTheme();
-
-  const playbackState = usePlaybackState();
-  const player = useSpotifyPlayer();
 
   // memo: states
   const hasPreviusTracks = useMemo(() => {
-    if (playbackState?.track_window?.previous_tracks?.length) {
+    if (playback?.track_window?.previous_tracks?.length) {
       return true;
     }
 
     return false;
-  }, [playbackState]);
+  }, [playback]);
 
   const hasNextTracks = useMemo(() => {
-    if (playbackState?.track_window?.next_tracks?.length) {
+    if (playback?.track_window?.next_tracks?.length) {
       return true;
     }
 
     return false;
-  }, [playbackState]);
+  }, [playback]);
 
   if (!player) return null;
 
@@ -53,35 +50,31 @@ const Controls = () => {
           <MdSkipPrevious size="30px" color={theme?.disabledColor} />
         </Atom.PlayerButton>
       )}
-      {!playbackState?.paused ? (
+      {!playback?.paused ? (
         <Atom.PlayerButton
-          hasDisabled={!playbackState?.duration}
+          hasDisabled={!playback?.duration}
           onClick={(e) =>
-            playbackState?.duration ? player.pause() : e.preventDefault()
+            playback?.duration ? player.pause() : e.preventDefault()
           }
         >
           <MdPause
             size="30px"
             color={
-              playbackState?.duration
-                ? theme?.highLightColor
-                : theme?.disabledColor
+              playback?.duration ? theme?.highLightColor : theme?.disabledColor
             }
           />
         </Atom.PlayerButton>
       ) : (
         <Atom.PlayerButton
-          hasDisabled={!playbackState?.duration}
+          hasDisabled={!playback?.duration}
           onClick={(e) =>
-            playbackState?.duration ? player.resume() : e.preventDefault()
+            playback?.duration ? player.resume() : e.preventDefault()
           }
         >
           <MdPlayArrow
             size="30px"
             color={
-              playbackState?.duration
-                ? theme?.highLightColor
-                : theme?.disabledColor
+              playback?.duration ? theme?.highLightColor : theme?.disabledColor
             }
           />
         </Atom.PlayerButton>

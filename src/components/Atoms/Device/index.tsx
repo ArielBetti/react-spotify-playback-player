@@ -1,23 +1,21 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, FC } from "react";
 
 // icons
 import {
   MdVolumeMute,
   MdVolumeOff,
   MdVolumeDown,
-  MdVolumeDownAlt,
   MdVolumeUp,
 } from "react-icons/md";
 import { useTheme } from "styled-components";
-import { useSpotifyPlayer } from "react-spotify-web-playback-sdk";
 
 // components
 import * as Atom from "./atoms";
 import { useCallback } from "react";
+import { IPlayerDevice } from "./types";
 
-const Device = () => {
+const Device: FC<IPlayerDevice> = ({ player }) => {
   const theme = useTheme();
-  const player = useSpotifyPlayer();
 
   // local: states
   const [volume, setVolume] = useState<number>(50);

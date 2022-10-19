@@ -33,7 +33,7 @@ export const PlayerInfoTextContainer = styled.div`
 
 export const PlayerInfoTrackName = styled.p<IPlayerInfoTrackName>`
   transition: linear 2.5s transform;
-  font-size: 1.15em;
+  font-size: 0.8125rem;
   color: ${(props) => props.theme.primaryTextColor};
   margin: 0px;
   width: auto;
@@ -53,7 +53,7 @@ export const PlayerInfoTrackArtists = styled.span<IPlayerInfoTrackArtists>`
   transition: linear 2.5s transform;
   width: auto;
   cursor: default;
-  font-size: 1em;
+  font-size: 0.6875rem;
   margin: 0px;
   color: ${(props) => props.theme.secondaryTextColor};
 

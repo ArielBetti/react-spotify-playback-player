@@ -1,17 +1,14 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, FC } from "react";
 
-import { usePlaybackState } from "react-spotify-web-playback-sdk";
-import { useTheme } from "styled-components";
 import { useEventEmitter } from "../../../hooks/useEventEmitter";
 
 // atoms: components
 import * as Atom from "./atoms";
-import { INavigateArtists } from "./types";
+import { INavigateArtists, IPlayerInfos } from "./types";
 
 // ::
-const Infos = () => {
-  const playbackState = usePlaybackState();
+const Infos: FC<IPlayerInfos> = ({ playback }) => {
   const { emit } = useEventEmitter();
 
   // local: states
@@ -34,18 +31,17 @@ const Infos = () => {
 
   useEffect(() => {
     if (
-      playbackState?.track_window &&
-      playbackState?.track_window.current_track?.artists.length > 0
+      playback?.track_window &&
+      playback?.track_window.current_track?.artists.length > 0
     ) {
       const artistNameList =
-        playbackState?.track_window?.current_track?.artists?.map(
+        playback?.track_window?.current_track?.artists?.map(
           (artist) => artist?.name
         );
 
-      const artistList =
-        playbackState?.track_window?.current_track?.artists?.map(
-          (artist) => artist
-        );
+      const artistList = playback?.track_window?.current_track?.artists?.map(
+        (artist) => artist
+      );
 
       const normalizeList = artistList?.map((artist, index) => ({
         name: `${
@@ -58,23 +54,23 @@ const Infos = () => {
 
       setNavigateToArtist(normalizeList);
 
-      if (playbackState?.track_window?.current_track?.album) {
-        const albumUri = playbackState?.track_window?.current_track?.album?.uri;
+      if (playback?.track_window?.current_track?.album) {
+        const albumUri = playback?.track_window?.current_track?.album?.uri;
         setNavigateToTrack(albumUri.replace("spotify:album:", ""));
       }
     }
   }, [
-    playbackState?.track_window?.current_track?.album,
-    playbackState?.track_window?.current_track?.artists,
+    playback?.track_window?.current_track?.album,
+    playback?.track_window?.current_track?.artists,
   ]);
 
-  if (!playbackState) return null;
+  if (!playback) return null;
 
   return (
     <Atom.PlayerInfosContainer>
       <Atom.PlayerInfoAlbumArt
         effect="blur"
-        src={playbackState?.track_window?.current_track?.album?.images[0]?.url}
+        src={playback?.track_window?.current_track?.album?.images[0]?.url}
         alt="Foto do album"
       />
       <Atom.PlayerInfoTextContainer>
@@ -84,7 +80,7 @@ const Infos = () => {
           trackNameTextLength={refTrackName.current?.innerText.length}
           ref={refTrackName}
         >
-          {playbackState?.track_window?.current_track?.name}
+          {playback?.track_window?.current_track?.name}
         </Atom.PlayerInfoTrackName>
         <Atom.PlayerInfoTrackArtists
           trackArtistWidth={refTrackArtists.current?.scrollWidth}

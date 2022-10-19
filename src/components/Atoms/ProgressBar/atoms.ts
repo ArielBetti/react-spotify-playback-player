@@ -21,7 +21,7 @@ export const PlayerProgressBarTimer = styled.span`
   align-items: center;
   min-width: 35px;
   color: ${(props) => props?.theme.primaryTextColor};
-  font-size: 1em;
+  font-size: 0.6875rem;
   margin: 0px;
 `;
 

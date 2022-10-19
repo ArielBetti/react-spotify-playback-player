@@ -1,7 +1,7 @@
 {
   "name": "react-spotify-playback-player",
-  "author": "Ariel Betti",
-  "version": "1.0.1",
+  "author": "Ariel Betti <ariel.betti@gmail.com>",
+  "version": "2.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -31,7 +31,6 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-lazy-load-image-component": "^1.5.5",
-    "react-spotify-web-playback-sdk": "^3.0.1",
     "styled-components": "^5.3.6",
     "vite-plugin-dts": "^1.6.6",
     "yarn": "^1.22.19"
@@ -49,7 +48,6 @@
     "react-dom": "^16.8.0 || 17.x",
     "react-icons": "^4.6.0",
     "react-lazy-load-image-component": "^1.5.5",
-    "react-spotify-web-playback-sdk": "^3.0.1",
     "styled-components": "^5.0.0"
   },
   "files": [
