@@ -53,7 +53,7 @@ const Form = () => {
         <Atom.FormParagraph>
           You can see how to use this component in the official documentation,
           to see the documentation access the link:
-          <Atom.FormAnchor href="https://github.com/ArielBetti" target="_blank">
+          <Atom.FormAnchor href="https://github.com/ArielBetti/react-spotify-playback-player/blob/main/README.md" target="_blank">
             how to use
           </Atom.FormAnchor>
         </Atom.FormParagraph>
