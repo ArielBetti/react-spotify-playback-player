@@ -1,4 +1,6 @@
-# react-spotify-web-playback-sdk
+# react-spotify-playback-player
+
+[![npm version](https://badge.fury.io/js/react-spotify-playback-player.svg)](https://badge.fury.io/js/react-spotify-playback-player) [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=react-spotify-playback-player)](https://react-spotify-playback-player.vercel.app/) [![bundlephobia](https://badgen.net/bundlephobia/minzip/react-spotify-playback-player)](https://bundlephobia.com/package/react-spotify-playback-player)
 
 ## 👋 Welcome to react-spotify-playback-player
 ### This component is a player that is able to play songs via [Spotify Web Playback](https://developer.spotify.com/documentation/web-playback-sdk/)
