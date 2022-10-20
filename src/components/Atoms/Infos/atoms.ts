@@ -26,6 +26,8 @@ export const PlayerInfoTextContainer = styled.div`
   white-space: nowrap;
   overflow: hidden;
   padding-left: ${(props) => props.theme?.spacing.xxs};
+  text-align: left;
+
   @media (max-width: ${(props) => props.theme?.breakpoints.sm}) {
     max-width: 90%;
   }
