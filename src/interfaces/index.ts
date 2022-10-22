@@ -1,3 +1,9 @@
+export interface ILinkClick {
+  name?: string,
+  uri?: string,
+  link?: string,
+}
+
 export interface Entity {
   name: string;
   uri: string;

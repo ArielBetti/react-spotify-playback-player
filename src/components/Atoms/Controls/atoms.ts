@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IPlayerButton } from "./types";
+import type { IPlayerButton } from "./types";
 
 export const PlayerControlsContainer = styled.div`
   display: flex;
@@ -15,5 +15,4 @@ export const PlayerButton = styled.button<IPlayerButton>`
   margin: 0;
   cursor: ${(props) => (props?.hasDisabled ? "initial" : "pointer")};
 `;
-
 

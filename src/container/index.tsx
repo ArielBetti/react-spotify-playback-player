@@ -36,6 +36,7 @@ const SpotifyPlaybackPlayer: FC<IInitializedProps> = ({
             newTheme?.secondaryTextColor || defaultTheme().secondaryTextColor,
           disabledColor:
             newTheme?.disabledColor || defaultTheme().disabledColor,
+          popOverColor: newTheme?.popOverColor || defaultTheme().popOverColor,
         }}
       >
         {children}

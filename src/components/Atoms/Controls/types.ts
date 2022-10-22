@@ -8,4 +8,5 @@ export interface IPlayerButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 export interface IPlayerControls {
   player: Player;
   playback?: PlaybackState;
+  floatbar?: boolean;
 }

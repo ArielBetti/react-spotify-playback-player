@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { useTheme } from "styled-components";
 
 // icons
@@ -14,11 +14,11 @@ import type { IPlayerControls } from "./types";
 
 // atoms: components
 import * as Atom from "./atoms";
-import { useMemo } from "react";
 
 // ::
-const Controls: FC<IPlayerControls> = ({ player, playback }) => {
+const Controls: FC<IPlayerControls> = ({ player, playback, floatbar }) => {
   const theme = useTheme();
+  const iconSize = floatbar ? 20 : 30;
 
   // memo: states
   const hasPreviusTracks = useMemo(() => {
@@ -43,11 +43,11 @@ const Controls: FC<IPlayerControls> = ({ player, playback }) => {
     <Atom.PlayerControlsContainer>
       {hasPreviusTracks ? (
         <Atom.PlayerButton onClick={() => player.previousTrack()}>
-          <MdSkipPrevious size="30px" color={theme?.highLightColor} />
+          <MdSkipPrevious size={iconSize} color={theme?.highLightColor} />
         </Atom.PlayerButton>
       ) : (
         <Atom.PlayerButton hasDisabled onClick={(e) => e.preventDefault()}>
-          <MdSkipPrevious size="30px" color={theme?.disabledColor} />
+          <MdSkipPrevious size={iconSize} color={theme?.disabledColor} />
         </Atom.PlayerButton>
       )}
       {!playback?.paused ? (
@@ -58,7 +58,7 @@ const Controls: FC<IPlayerControls> = ({ player, playback }) => {
           }
         >
           <MdPause
-            size="30px"
+            size={iconSize}
             color={
               playback?.duration ? theme?.highLightColor : theme?.disabledColor
             }
@@ -72,7 +72,7 @@ const Controls: FC<IPlayerControls> = ({ player, playback }) => {
           }
         >
           <MdPlayArrow
-            size="30px"
+            size={iconSize}
             color={
               playback?.duration ? theme?.highLightColor : theme?.disabledColor
             }
@@ -81,11 +81,11 @@ const Controls: FC<IPlayerControls> = ({ player, playback }) => {
       )}
       {hasNextTracks ? (
         <Atom.PlayerButton onClick={() => player.nextTrack()}>
-          <MdSkipNext size="30px" color={theme?.highLightColor} />
+          <MdSkipNext size={iconSize} color={theme?.highLightColor} />
         </Atom.PlayerButton>
       ) : (
         <Atom.PlayerButton onClick={(e) => e.preventDefault()} hasDisabled>
-          <MdSkipNext size="30px" color={theme?.disabledColor} />
+          <MdSkipNext size={iconSize} color={theme?.disabledColor} />
         </Atom.PlayerButton>
       )}
     </Atom.PlayerControlsContainer>

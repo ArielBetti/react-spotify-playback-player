@@ -26,7 +26,6 @@ export function useEventEmitter<Events extends BaseEvents>(): any {
         return () => {
           context?.remove(type, listener);
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [listener, type, ...deps]);
     },
     emit,

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { IDeviceVolumeSlider } from "./types";
+import type { IDeviceVolumeSlider } from "./types";
 
 export const DeviceControlsContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
   gap: 5px;
 `;
@@ -18,11 +18,9 @@ export const DeviceVolumeContainer = styled.div`
 export const DeviceVolumeSlider = styled.input<IDeviceVolumeSlider>`
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
-  max-width: 200px;
   border-radius: 10px;
   cursor: pointer;
-  height: 5px;
+  height: ${(props) => (props.floatbar ? "3px" : "5px")};
   border-radius: 5px;
   background-color: ${(props) => props?.theme?.secondaryBackgroundColor};
   outline: none;

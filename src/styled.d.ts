@@ -8,6 +8,7 @@ declare module "styled-components" {
     secondaryBackgroundColor?: string;
     secondaryTextColor?: string;
     disabledColor?: string;
+    popOverColor?: string;
     breakpoints: {
       xsm: string;
       sm: string;

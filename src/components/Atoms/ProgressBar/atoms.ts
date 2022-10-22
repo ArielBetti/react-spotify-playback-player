@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { IPlayerProgressBarSlider } from "./types";
+
+// types
+import type { IPlayerProgressBarSlider, IPlayerProgressBarTimer } from "./types";
 
 export const PlayerProgressBar = styled.div`
   display: flex;
@@ -15,13 +17,13 @@ export const PlayerProgressBarSliderContainer = styled.div`
   align-items: center;
 `;
 
-export const PlayerProgressBarTimer = styled.span`
+export const PlayerProgressBarTimer = styled.span<IPlayerProgressBarTimer>`
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 35px;
   color: ${(props) => props?.theme.primaryTextColor};
-  font-size: 0.8975rem;
+  font-size: ${(props) => (props.floatbar ? "0.678rem" : "0.978rem")};
   margin: 0px;
 `;
 
@@ -32,7 +34,7 @@ export const PlayerProgressBarSlider = styled.input<IPlayerProgressBarSlider>`
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
-  height: 5px;
+  height: ${(props) => (props.floatbar ? "3px" : "5px")};
   border-radius: 5px;
   background-color: ${(props) => props?.theme?.secondaryBackgroundColor};
   outline: none;
