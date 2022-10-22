@@ -1,7 +1,7 @@
 {
   "name": "react-spotify-playback-player",
   "author": "Ariel Betti <ariel.betti@gmail.com>",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
