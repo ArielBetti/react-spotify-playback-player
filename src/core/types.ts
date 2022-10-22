@@ -13,6 +13,7 @@ export interface IInitializedProps {
     secondaryBackgroundColor?: string;
     secondaryTextColor?: string;
     disabledColor?: string;
+    popOverColor?: string;
   };
   onLinkClick?: (e?: any) => any;
 }

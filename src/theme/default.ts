@@ -7,6 +7,7 @@ export const defaultTheme = (): DefaultTheme => ({
   secondaryBackgroundColor: "#282828",
   secondaryTextColor: "#b3b3b3",
   disabledColor: "#373737",
+  popOverColor: "#050505",
   breakpoints: {
     xsm: "360px",
     sm: "576px",

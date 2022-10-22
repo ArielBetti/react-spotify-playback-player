@@ -14,6 +14,18 @@ export const PlayerContainer = styled.div`
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
   border-top: 1px solid ${(props) => props.theme?.secondaryBackgroundColor};
   background: ${(props) => props.theme?.backgroundColor};
+  animation: fadeIn 0.3s both;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 export const PlayerSeekBarContainer = styled.div`
@@ -24,10 +36,16 @@ export const PlayerSeekBarContainer = styled.div`
   width: 100%;
 `;
 
+export const PlayerSeekBarContainerRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
 export const PlayerBarContainer = styled(Container)`
   flex-direction: row;
   gap: 10px;
-  @media (max-width: ${(props) => props.theme?.breakpoints.md}) {
-    flex-direction: column;
-  }
+  position: relative;
 `;
