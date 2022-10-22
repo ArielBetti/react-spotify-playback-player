@@ -52,8 +52,8 @@ const Infos: FC<IPlayerInfos> = ({ playback, floatbar }) => {
             ? artistNameList[index]
             : `${artistNameList[index]}, `
         }`,
-        uri: artist?.uri?.replace("spotify:artist:", ""),
-        link: artist?.uri,
+        uri: artist?.uri,
+        link: artist?.uri?.replace("spotify:artist:", ""),
       }));
 
       setNavigateToArtist(normalizeList);
